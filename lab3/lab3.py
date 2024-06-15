@@ -7,7 +7,6 @@ from spyre import server
 import matplotlib.pyplot as plt
 
 
-
 def download_data(region_id, start_year=1981, end_year=2024):
     if not os.path.exists("..\data_VHI"):
         os.makedirs("..\data_VHI")
@@ -114,6 +113,7 @@ ids_with_names = {
     19: 'Харківська', 20: 'Херсонська', 21: 'Хмельницька',
     22: 'Черкаська', 23: 'Чернівецька', 24: 'Чернігівська', 25: 'Республіка Крим'
 }
+
 
 class WebAnalyzer(server.App):
     title = "lab3"
@@ -249,6 +249,6 @@ class WebAnalyzer(server.App):
         plt.tight_layout()
         return plt.gcf()
 
-
+#ggsh
 app = WebAnalyzer()
-app.launch(port=7777)
+app.launch(port=4444)
