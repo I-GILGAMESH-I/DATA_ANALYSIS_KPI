@@ -249,6 +249,6 @@ class WebAnalyzer(server.App):
         plt.tight_layout()
         return plt.gcf()
 
-#ggsh
+
 app = WebAnalyzer()
 app.launch(port=4444)
