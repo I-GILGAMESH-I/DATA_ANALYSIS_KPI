@@ -63,10 +63,10 @@ freq_slider = Slider(title="Частота", value=INITIAL_FREQUENCY, start=0.1,
 phase_slider = Slider(title="Фаза", value=INITIAL_PHASE, start=-np.pi, end=np.pi, step=0.1)
 noise_mean_slider = Slider(title="Шум (середнє)", value=INITIAL_NOISE_MEAN, start=-1.0, end=1.0, step=0.1)
 noise_dispersion_slider = Slider(title="Шум (дисперсія)", value=INITIAL_NOISE_DISPERSION, start=0.01, end=1.0, step=0.01)
-gaussian_window_slider = Slider(title="Gaussian Window", value=5, start=3, end=21, step=2)
+gaussian_window_slider = Slider(title="Gaussian Window", value=5, start=3, end=100, step=2)
 gaussian_std_slider = Slider(title="Gaussian STD", value=2, start=0.1, end=8.0, step=0.1)
-uniform_window_slider = Slider(title="Uniform Window", value=5, start=3, end=21, step=2)
-median_window_slider = Slider(title="Median Window", value=5, start=3, end=21, step=2)
+uniform_window_slider = Slider(title="Uniform Window", value=5, start=3, end=100, step=2)
+median_window_slider = Slider(title="Median Window", value=5, start=3, end=100, step=2)
 
 checkbox_group = CheckboxGroup(labels=["Показати шум"], active=[0], width=200)
 
