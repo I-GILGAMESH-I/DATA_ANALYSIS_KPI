@@ -2,7 +2,7 @@ import numpy as np
 from scipy import signal
 import matplotlib.pyplot as plt
 from matplotlib.widgets import Slider, Button, CheckButtons, RadioButtons
-
+# test
 INITIAL_AMPLITUDE = 1.0
 INITIAL_FREQUENCY = 1.0
 INITIAL_PHASE = 0.0
