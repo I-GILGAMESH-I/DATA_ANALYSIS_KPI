@@ -251,4 +251,4 @@ class WebAnalyzer(server.App):
 
 
 app = WebAnalyzer()
-app.launch(port=4444)
+app.launch(port=7777)

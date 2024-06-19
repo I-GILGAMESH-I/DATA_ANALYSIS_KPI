@@ -11,10 +11,12 @@ INITIAL_NOISE_DISPERSION = 0.1
 SHOW_NOISE_FLAG = True
 BASE_NOISE_ARRAY = np.random.normal(0, 1, 1000)
 
+
 def create_new_noise(event):
     global BASE_NOISE_ARRAY
     BASE_NOISE_ARRAY = np.random.normal(0, 1, 1000)
     update_plot(None)
+
 
 def harmonic_signal_with_noise(amplitude, frequency, phase, noise_mean, noise_dispersion, show_noise=True):
     time = np.linspace(0, 10, 1000)
@@ -26,6 +28,7 @@ def harmonic_signal_with_noise(amplitude, frequency, phase, noise_mean, noise_di
 
     return time, harmonic_signal
 
+
 def apply_filter(input_signal, filter_type='None', sigma=None, window_size=None):
     if filter_type == 'None':
         filtered_signal = input_signal
@@ -36,6 +39,7 @@ def apply_filter(input_signal, filter_type='None', sigma=None, window_size=None)
         window = np.ones(window_size) / window_size
         filtered_signal = signal.convolve(input_signal, window, mode='same')
     return filtered_signal
+
 
 fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 8), gridspec_kw={'height_ratios': [1.5, 1.5]})
 plt.subplots_adjust(bottom=0.6, hspace=0.9)
@@ -89,6 +93,7 @@ reset_button = Button(reset_button_ax, 'Reset')
 ax_new_noise_button = plt.axes([0.55, 0.01, 0.1, 0.04])
 new_noise_button = Button(ax_new_noise_button, 'Новий шум')
 
+
 def update_plot(val):
     amplitude = amp_slider.val
     frequency = freq_slider.val
@@ -115,6 +120,7 @@ def update_plot(val):
         ax2.set_title(f'Відфільтрована гармоніка (тип={filter_type})')
     fig.canvas.draw_idle()
 
+
 def reset_parameters(event):
     amp_slider.reset()
     freq_slider.reset()
@@ -125,6 +131,7 @@ def reset_parameters(event):
     sigma_slider.reset()
     window_size_slider.reset()
     update_plot(None)
+
 
 amp_slider.on_changed(update_plot)
 freq_slider.on_changed(update_plot)
